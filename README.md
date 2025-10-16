@@ -41,6 +41,18 @@ git commit -m "my first commit"
 git push
 ```
 
+Ora devi committare anche nel parent MICROFRONTEND-PROTOTYPE
+
+```bash
+cd ..
+git status // vedrai la modifica del child
+git add .
+git commit -m "Update child module"
+git push
+```
+
+A questo punto consiglio di confrontare i commit dei relativi modules con quelli su github
+
 **Nota importante**: I repository sono separati nel senso che anche su GitHub sono repo ben distinte ma hanno una reference tramite git submodules.
 
 ## Clonare il progetto
@@ -78,3 +90,9 @@ rm -rf .git/modules/path/to/submodule
 # Rimuovi la voce in .gitmodules e la directory del submodule
 git rm -f path/to/submodule
 ```
+
+**Note**
+Un submodule può chiaramente contenere un altro submodule
+
+**Video tutorial utile**
+https://www.youtube.com/watch?v=gSlXo2iLBro
