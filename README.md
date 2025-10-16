@@ -42,3 +42,39 @@ git push
 ```
 
 **Nota importante**: I repository sono separati nel senso che anche su GitHub sono repo ben distinte ma hanno una reference tramite git submodules.
+
+## Clonare il progetto
+
+Quando cloni un progetto con submodules, i submodules inizialmente saranno vuoti:
+
+```bash
+# Clona il progetto
+git clone microfrontend-prototype
+
+# Change directory per entrare nel progetto
+cd microfrontend-prototype
+
+# Questo scaricherà i file presenti nei moduli
+git submodule update --init
+
+# Entra nel submodule
+cd micro-fe-1
+
+# Il nome del branch sarà quello di un commit, quindi fai checkout al branch principale
+git checkout main
+```
+
+## Rimuovere un submodule
+
+Per rimuovere completamente un submodule dal progetto ([riferimento](https://gist.github.com/myusuf3/7f645819ded92bda6677)):
+
+```bash
+# Rimuovi la voce del submodule da .git/config
+git submodule deinit -f path/to/submodule
+
+# Rimuovi la directory del submodule da .git/modules del superproject
+rm -rf .git/modules/path/to/submodule
+
+# Rimuovi la voce in .gitmodules e la directory del submodule
+git rm -f path/to/submodule
+```
