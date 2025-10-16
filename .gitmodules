@@ -1,3 +1,9 @@
 [submodule "micro-fe-1"]
 	path = micro-fe-1
 	url = https://github.com/Joschavai/micro-fe-1
+[submodule "micro-fe-2"]
+	path = micro-fe-2
+	url = https://github.com/Joschavai/micro-fe-2
+[submodule "micro-fe-container"]
+	path = micro-fe-container
+	url = https://github.com/Joschavai/micro-fe-container

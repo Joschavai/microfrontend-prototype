@@ -1,2 +1,44 @@
 # microfrontend-prototype
+
 Main container for prototyping microfrontend
+
+## Setup con Git Submodules
+
+### Configurazione iniziale
+
+1. **GitHub**: Crea repo microfrontend-prototype (central repo)
+2. **Local**: `git clone microfrontend-prototype`
+3. **GitHub**: Crea repo micro-fe-1 (primo submodulo)
+
+### Aggiungere submodule
+
+```bash
+cd microfrontend-prototype
+git submodule add https://github.com/Joschavai/micro-fe-1
+```
+
+Questo comando aggiunge il submodule ai submodules: verifica file `.gitmodules` in microfrontend-prototype
+
+### Configurare il progetto nel submodule
+
+```bash
+cd micro-fe-1
+yarn create vite .  # (per esempio)
+cd ..  # ora sono in microfrontend-prototype
+git add .
+git commit -m "Adding first submodule"
+git push
+```
+
+Verifica su GitHub che tutto sia stato caricato correttamente.
+
+### Lavorare nel submodule
+
+```bash
+cd micro-fe-1
+git add .
+git commit -m "my first commit"
+git push
+```
+
+**Nota importante**: I repository sono separati nel senso che anche su GitHub sono repo ben distinte ma hanno una reference tramite git submodules.
