@@ -7,6 +7,3 @@
 [submodule "micro-fe-container"]
 	path = micro-fe-container
 	url = https://github.com/Joschavai/micro-fe-container
-[submodule "micro-fe-todelete"]
-	path = micro-fe-todelete
-	url = https://github.com/Joschavai/micro-fe-todelete
